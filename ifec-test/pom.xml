@@ -34,6 +34,7 @@
   </modules>
   <properties>
     <aem.host>localhost</aem.host>
+    <aem.version>6.5.17.0</aem.version>
     <aem.port>4502</aem.port>
     <aem.publish.host>localhost</aem.publish.host>
     <aem.publish.port>4503</aem.publish.port>
@@ -48,6 +49,26 @@
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     <componentGroupName>ifec-test</componentGroupName>
   </properties>
+  <repositories>
+    <repository>
+      <id>adobe-public-releases</id>
+      <name>Adobe Public Releases</name>
+      <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+  <pluginRepositories>
+    <pluginRepository>
+      <id>adobe-public-releases</id>
+      <name>Adobe Public Releases</name>
+      <url>https://repo.adobe.com/nexus/content/groups/public/</url>
+    </pluginRepository>
+  </pluginRepositories>
   <build>
     <plugins>
       <!-- Maven Release Plugin -->
@@ -646,7 +667,7 @@ Bundle-DocURL:
       <dependency>
         <groupId>com.adobe.aem</groupId>
         <artifactId>uber-jar</artifactId>
-        <version>6.5.17.0</version>
+        <version>${aem.version}</version>
         <scope>provided</scope>
       </dependency>
       <!-- Apache Sling Dependencies -->
