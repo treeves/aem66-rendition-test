@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/ifec-test" mode="merge"/>
+    <filter root="/content/ifec-test" mode="merge"/>
+    <filter root="/content/dam/ifec-test" mode="merge">
+        <exclude pattern="/content/dam/ifec-test(/.*)?"/>
+        <include pattern="/content/dam/ifec-test/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/ifec-test/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/ifec-test" mode="merge"/>
+</workspaceFilter>

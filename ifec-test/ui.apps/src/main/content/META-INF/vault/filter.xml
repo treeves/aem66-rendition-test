@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/ifec-test/clientlibs"/>
+    <filter root="/apps/ifec-test/components"/>
+    <filter root="/apps/ifec-test/i18n"/>
+</workspaceFilter>
