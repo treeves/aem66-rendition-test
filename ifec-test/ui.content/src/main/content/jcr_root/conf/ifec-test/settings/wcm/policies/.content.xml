@@ -33,7 +33,7 @@
                     jcr:primaryType="nt:unstructured"
                     jcr:title="Content Image"
                     sling:resourceType="wcm/core/components/policy/policy"
-                    allowedRenditionWidths="[320,480,600,800,1024,1200,1600]"
+                    allowedRenditionWidths="[320,480,600,800,1024,1200,1600,2000,4000]"
                     disableLazyLoading="false"
                     allowUpload="false"
                     altValueFromDAM="true"

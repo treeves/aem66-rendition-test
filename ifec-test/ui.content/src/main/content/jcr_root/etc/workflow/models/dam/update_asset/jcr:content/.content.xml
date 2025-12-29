@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+          xmlns:cq="http://www.day.com/jcr/cq/1.0"
+          xmlns:jcr="http://www.jcp.org/jcr/1.0"
+          jcr:primaryType="nt:unstructured"
+          jcr:title="DAM Update Asset (extended)">
+    <metaData jcr:primaryType="nt:unstructured">
+        <name jcr:primaryType="nt:unstructured">dam/update_asset</name>
+        <title jcr:primaryType="nt:unstructured">DAM Update Asset (extended)</title>
+    </metaData>
+    <!-- Additional rendition steps: webp-2k (2000px WebP) and flytedge-4k (4K WebP) -->
+    <process-webp-2k jcr:primaryType="nt:unstructured"
+                     sling:resourceType="cq/workflow/components/process"
+                     process.label="Create webp-2k rendition"
+                     process.args="width=2000;format=webp;name=webp-2k"
+                     process.processor="com.day.cq.dam.core.process.CreateRenditionsProcess"/>
+
+    <process-flytedge-4k jcr:primaryType="nt:unstructured"
+                         sling:resourceType="cq/workflow/components/process"
+                         process.label="Create flytedge-4k rendition"
+                         process.args="width=3840;format=webp;name=flytedge-4k"
+                         process.processor="com.day.cq.dam.core.process.CreateRenditionsProcess"/>
+</jcr:root>
